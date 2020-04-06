@@ -4,7 +4,7 @@ CONFIG_FILE=/data/config.yml
 
 cd /data
 
-if [ ! -f $CONFIG_FILE ] || [ $OVERWRITE_CONFIG -eq "yes" ]
+if [ ! -f $CONFIG_FILE ] || [ "$OVERWRITE_CONFIG" == "yes" ]
 then
     envsubst < /opt/config.yml.template > /data/config.yml
 fi
