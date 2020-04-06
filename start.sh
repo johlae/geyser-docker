@@ -9,4 +9,4 @@ then
     envsubst < /opt/config.yml.template > /data/config.yml
 fi
 
-java -Xms$INIT_MEMORY -Xmx$MAX_MEMORY -jar /opt/$JAR_FILE
+java -Xms$INIT_MEMORY -Xmx$MAX_MEMORY -jar /opt/Geyser.jar

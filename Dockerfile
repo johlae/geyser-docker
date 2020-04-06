@@ -2,10 +2,7 @@ FROM adoptopenjdk:8-jre-hotspot
 VOLUME /data
 EXPOSE 19132
 
-ARG JAR_FILE=Geyser.jar
 ARG BUILD_TYPE=lastSuccessfulBuild
-
-ENV JAR_FILE $JAR_FILE
 
 # Java Start Options
 ENV INIT_MEMORY "1024M"
@@ -41,7 +38,7 @@ ENV GEYSER_METRICS_UUID; "generateduuid"
 
 RUN apt-get update && apt-get install -y gettext-base && rm -rf /var/lib/apt/lists/*
 
-ADD https://ci.nukkitx.com/job/GeyserMC/job/Geyser/job/master/$BUILD_TYPE/artifact/bootstrap/standalone/target/$JAR_FILE /opt/$JAR_FILE
+ADD https://ci.nukkitx.com/job/GeyserMC/job/Geyser/job/master/$BUILD_TYPE/artifact/bootstrap/standalone/target/$JAR_FILE /opt/Geyser.jar
 
 COPY start.sh /usr/local/bin/start.sh
 COPY config.yml.template /opt/config.yml.template
