@@ -1,9 +1,12 @@
+# writing a separate dockerfile due to shortcomings in the
+# docker hub automated build tools.
+
 FROM adoptopenjdk:8-jre-hotspot
 VOLUME /data
 EXPOSE 19132
 
 ARG JAR_FILE=Geyser.jar
-ARG BUILD_TYPE=lastSuccessfulBuild
+ARG BUILD_TYPE=lastStableBuild
 
 ENV JAR_FILE $JAR_FILE
 
