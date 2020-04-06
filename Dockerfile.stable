@@ -42,6 +42,8 @@ ENV GEYSER_ALLOW_THIRD_PARTY_CAPES "true"
 ENV GEYSER_METRICS_ENABLED "false"
 ENV GEYSER_METRICS_UUID; "generateduuid"
 
+RUN apt-get update && apt-get install -y gettext-base && rm -rf /var/lib/apt/lists/*
+
 ADD https://ci.nukkitx.com/job/GeyserMC/job/Geyser/job/master/$BUILD_TYPE/artifact/bootstrap/standalone/target/$JAR_FILE /opt/$JAR_FILE
 
 COPY start.sh /usr/local/bin/start.sh
