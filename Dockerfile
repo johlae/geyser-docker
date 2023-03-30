@@ -1,4 +1,4 @@
-FROM adoptopenjdk:8-jre-hotspot
+FROM eclipse-temurin:17
 VOLUME /data
 EXPOSE 19132
 
