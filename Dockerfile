@@ -40,7 +40,7 @@ RUN apt-get update && apt-get install -y gettext-base && rm -rf /var/lib/apt/lis
 
 # John addd 
 RUN mkdir /opt/geysersource
-ADD https://download.geysermc.org/v2/projects/geyser/versions/latest/builds/latest/downloads/standalone /opt/geysersource/Geyser.jar
+ADD https://download.geysermc.org/v2/projects/geyser/versions/latest/builds/latest/downloads/standalone /opt/Geyser.jar
 
 COPY start.sh /usr/local/bin/start.sh
 COPY config.yml.template /opt/config.yml.template
