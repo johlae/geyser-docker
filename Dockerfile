@@ -42,7 +42,7 @@ RUN apt-get update && apt-get install -y gettext-base && rm -rf /var/lib/apt/lis
 RUN mkdir /opt/geysersource
 ADD https://download.geysermc.org/v2/projects/geyser/versions/latest/builds/latest/downloads/standalone /opt/geysersource
 
-RUN java -jar /opt/Geyser-Standalone.jar /opt/geysersource
+RUN /opt/java/openjdk/bin/java -jar /opt/Geyser-Standalone.jar /opt/geysersource
 
 COPY start.sh /usr/local/bin/start.sh
 COPY config.yml.template /opt/config.yml.template
