@@ -38,7 +38,11 @@ ENV GEYSER_METRICS_UUID; "generateduuid"
 
 RUN apt-get update && apt-get install -y gettext-base && rm -rf /var/lib/apt/lists/*
 
-ADD https://ci.opencollab.dev/job/GeyserMC/job/Geyser/job/master/lastSuccessfulBuild/artifact/bootstrap/standalone/build/libs/Geyser-Standalone.jar /opt/Geyser.jar
+# John addd 
+RUN mkdir /opt/geysersource
+ADD https://download.geysermc.org/v2/projects/geyser/versions/latest/builds/latest/downloads/standalone /opt/geysersource
+
+RUN java -jar /opt/Geyser-Standalone.jar /opt/geysersource/
 
 COPY start.sh /usr/local/bin/start.sh
 COPY config.yml.template /opt/config.yml.template
