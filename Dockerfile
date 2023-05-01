@@ -42,7 +42,6 @@ RUN apt-get update && apt-get install -y gettext-base && rm -rf /var/lib/apt/lis
 RUN mkdir /opt/geysersource
 ADD https://download.geysermc.org/v2/projects/geyser/versions/latest/builds/latest/downloads/standalone /opt/geysersource
 
-RUN apt install openjdk-19-jre-headless
 RUN java -jar /opt/Geyser-Standalone.jar /opt/geysersource
 
 COPY start.sh /usr/local/bin/start.sh
