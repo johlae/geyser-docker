@@ -14,8 +14,8 @@ ENV OVERWRITE_CONFIG "no"
 # Bedrock server config
 ENV BEDROCK_ADDRESS "0.0.0.0"
 ENV BEDROCK_PORT "19132"
-ENV BEDROCK_MOTD1 "GeyserMC"
-ENV BEDROCK_MOTD2 "Another GeyserMC forced host."
+ENV BEDROCK_MOTD1 "JohnsGeyserMC"
+ENV BEDROCK_MOTD2 "Ubutuserver GeyserMC forced host."
 
 # Remote Server Config (java server)
 ENV REMOTE_ADDRESS: "127.0.0.1"
